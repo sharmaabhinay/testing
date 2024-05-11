@@ -9,7 +9,9 @@ let PORT = 4100;
 
 app.use(express.json());
 app.use(cors());
-
+app.get('/',(req,res)=> {
+  res.send('hello world')
+})
 //get user details in admin panel
 app.post('/', async (req, res) => {
   try {
